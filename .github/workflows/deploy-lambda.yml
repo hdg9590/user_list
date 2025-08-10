@@ -21,6 +21,8 @@ jobs:
       - name: Zip Lambda package
         run: |
           zip -r userlist.zip user_list.py pymysql
+      - name: List contents of zip
+        run: unzip -l userlist.zip
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
